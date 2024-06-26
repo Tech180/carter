@@ -1,6 +1,6 @@
 import React from 'react';
 import DarkSwitch from '../darkmode/darkswitch';
-import Cart from '../cart/cart';
+import Cart from '../shopping-cart/cart';
 
 function Header() {
   const [darkMode] = DarkSwitch();

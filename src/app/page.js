@@ -17,7 +17,8 @@ export default function Page() {
 
   return (
     <Router>
-      {//<Navbar />
+      {
+        //<Navbar />
       }
       <Routes>
         <Route path="/" element={<Home />} />
