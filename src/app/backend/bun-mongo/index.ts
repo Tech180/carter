@@ -4,6 +4,8 @@ import {Account,Recipe} from './schema';
 // connect to database
 await mongoose.connect('mongodb://localhost:27017/carter');
 
+const accountsCollection = mongoose.connection.db.collection("")
+
 // const user1 = new Account({
 //     username: "TomRum",
 //     password: "654321",

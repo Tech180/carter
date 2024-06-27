@@ -1,0 +1,65 @@
+{
+  $jsonSchema: {
+    bsonType: 'object',
+    title: 'Recipe Object Validation',
+    required: [
+      'name'
+    ],
+    properties: {
+      name: {
+        bsonType: 'string',
+        description: '\'name\' must be a string and is required'
+      },
+      ingredients: {
+        bsonType: 'array',
+        maxItems: 50,
+        items: {
+          bsonType: 'object',
+          required: [
+            '_id',
+            'ingredient',
+            'quantity',
+            'measure'
+          ],
+          properties: {
+            _id: {
+              bsonType: 'objectId'
+            },
+            ingredient: {
+              bsonType: 'string',
+              maxLength: 100
+            },
+            quantity: {
+              bsonType: 'number',
+              maximum: 2000
+            },
+            measure: {
+              'enum': [
+                'tsp',
+                'Tbsp',
+                'cup',
+                'gram',
+                'mL',
+                'fl oz',
+                'lbs',
+                'package'
+              ]
+            }
+          }
+        }
+      },
+      tags: {
+        bsonType: 'array',
+        maxItems: 20,
+        items: {
+          bsonType: 'string',
+          maxLength: 100
+        }
+      },
+      description: {
+        bsonType: 'string',
+        maxLength: 2000
+      }
+    }
+  }
+}
