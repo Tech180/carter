@@ -1,5 +1,5 @@
 import React from 'react';
-import FadeInSection from './animations/fade-in-section';
+import FadeInSection from '../animations/fade-in-section';
 import './home-body.css';
 
 function HomeBody() {
